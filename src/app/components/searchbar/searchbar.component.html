@@ -1,0 +1,27 @@
+<div class="text-center searchbox">
+    <img src="assets/images/git-logo.png" width="250" class="mb-4" id="mainlogo">
+    <br>
+
+  <input type="email" class="form-control" id="searchinput" aria-describedby="emailHelp" placeholder="Search GitHub" [formControl]="searchField"  >
+  <div id="searchresults" class="mt-5">
+      
+      <div *ngFor="let item of results | async; let i=index">
+          <div class="card w-100 text-left mt-2" *ngIf="i<2 && searchtextLength != 0">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <button type="button" class="btn btn-link">{{item.url}}</button>
+            <p class="card-text">Login : {{item.login}}</p>
+          </div>
+          </div>
+      </div>
+
+      
+          <div class="card w-100 text-left mt-2 text-center loadingcard" *ngIf="loading">
+          <div class="card-body">
+            <h5 class="card-title"><img src="assets/images/loading.gif"></h5>
+          </div>
+          </div>
+      
+     
+  </div>
+</div>
