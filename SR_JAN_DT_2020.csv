@@ -4,7 +4,7 @@ Defect Count,SR Number,Date/Time Opened,Last Cisco Update,Opened Date,Closed Dat
 According to the captures collected on the end point (Jabbber) and on the ASA, the RTP stream was leaving the client but it was not reaching the HCS infrastructure so there was some drops on the ISP due to the bandwidth usage.",Closed
 0,688172092,01/01/20 10:05,01/06/20 5:08,01/01/20,06/01/20,The customer has some SQL queries for the CUCM and wanted the open the SR. Checked the contract number and created the case for the customer.,SQL Queries for CUCM,ORANGE BUSINESS SERVICES,Voice - Communications Manager,"Communications Manager LDAP Services (Sync, Authentication)",Software Configuration,10.6.1,"++ Shared risdb queries mentioned in doc  https://www.cisco.com/c/en/us/support/docs/unified-communications/unified-communications-manager-callmanager/118307-probsol-cucm-00.pdf
 
-
+rgrg
 - To see SIP trunk status the command will be ""show risdb query sip""
 - For Media resources use ""show risdb query mediaresource""
 - For H23 devices use ""show risdb query h323""
@@ -759,9 +759,9 @@ From CUCM:
 
 From Cisco Unified CM administration page go to -- > Bulk Administration -- > Phones -- > Update Phones -- > Query
  
-·       In this list you can either choose one phone or a set of phones from the search to force the log out ( choose one phone for testing purposes, and choose all  when you want to set the settings for all phones)
+Â·       In this list you can either choose one phone or a set of phones from the search to force the log out ( choose one phone for testing purposes, and choose all  when you want to set the settings for all phones)
  
-·       Press next, in this page we don?t want to change anything ( we only want to create an empty query just to force the phones to logout from EM) check the picture below:
+Â·       Press next, in this page we don?t want to change anything ( we only want to create an empty query just to force the phones to logout from EM) check the picture below:
  
  
 A screenshot of a cell phone
@@ -769,25 +769,25 @@ A screenshot of a cell phone
 Description automatically generated
  
  
-·       mark to logout users before update and don?t reset/restart/apply config ( we don?t want to affect the phone we just want to logout)
+Â·       mark to logout users before update and don?t reset/restart/apply config ( we don?t want to affect the phone we just want to logout)
  
-·       Press submit
+Â·       Press submit
  
-·       Go to Bulk Administration --- > Job Scheduler
+Â·       Go to Bulk Administration --- > Job Scheduler
  
-·       Find the job you just created  (check the Submit Date Time<javascript:onColumnFindSubmit(%22batjob.submitdatetime%22,%22true%22)> to find which one)
+Â·       Find the job you just created  (check the Submit Date Time<javascript:onColumnFindSubmit(%22batjob.submitdatetime%22,%22true%22)> to find which one)
  
-·       In that Job scheduler configure the following ( as seen below)
+Â·       In that Job scheduler configure the following ( as seen below)
  
 A screenshot of a cell phone
 
 Description automatically generated
  
-·       In the scheduled Date Time choose time to match 18:00:00 ( if your system clock is different than the phone clock, make sure to make the appropriate adjustments to match 6 PM)
+Â·       In the scheduled Date Time choose time to match 18:00:00 ( if your system clock is different than the phone clock, make sure to make the appropriate adjustments to match 6 PM)
  
-·       In frequency choose daily.
+Â·       In frequency choose daily.
  
-·       Save and activate Job.
+Â·       Save and activate Job.
 
 
 
@@ -1059,8 +1059,8 @@ The alarm is generated on Sun Jan 05 22:33:29 CST 2020.",[RTMT-ALERT-Asbury-Prod
 
 What is the Complete CUC Version?
 -   Version 11.5.1.16900-16
-·        Do you have secure integration either with SIP or SCCP?
-·        Please go to Cisco Unity Connection Administration page.
+Â·        Do you have secure integration either with SIP or SCCP?
+Â·        Please go to Cisco Unity Connection Administration page.
 o   Go to Telephony integrations>> Port group >> Click on Port group and send me a screenshot of this page.
        
 Did you start receiving this alert after upgrading the CUC to 11.5.1SU6 or higher version? yes
@@ -1937,7 +1937,7 @@ SR 688029249 HelpDesk#271356539 : MetLife - SYSLOG: %UC_ILS-3-ILSDuplicateCluste
 
 Please make sure the script that does the DNS changes waits at least 2 minutes between changes to allow the fix for CSCuw41476 to recover the UDP port.
  CSCvj52834 is an enhancement request which suggests not closing the port at all after a send failure.  This enhancements also suggests using TCP as a workaround to avoid the hitting the root cause for CSCuw41476.",Closed
-0,688219151,01/09/20 13:15,02/04/20 12:30,09/01/20,04/02/20,"Please assist us with this alert. It´s a recurring alert, that´s being generated almost every day and, sometimes it alerts multiple times during the day.
+0,688219151,01/09/20 13:15,02/04/20 12:30,09/01/20,04/02/20,"Please assist us with this alert. ItÂ´s a recurring alert, thatÂ´s being generated almost every day and, sometimes it alerts multiple times during the day.
 - CUCM Vers.: 11.5.1.14900-11
 - There was no recent change to the environment.
 - Cisco CDR Agent and Cisco CAR Scheduler services restarted but, issue persists.
@@ -3057,7 +3057,7 @@ After reviewing the packet capture, I look for the warning ? Unable to find devi
 48861927.012 |11:38:18.574 |AppInfo  |SIPStationD(83948) - sendRegisterResp: non-200 response code 404, ccbId 6190878, expires 4294967295, warning Unable to find device/user in database
 48861927.013 |11:38:18.574 |AppInfo  |EndPointTransientConnection - An endpoint attempted to register but did not complete registration Connecting Port:5060 Device name:ATA210DC67D6201 Device type:36262 Reason Code:3 Protocol:SIP Device MAC address:210DC67D6201 LastSignalReceived:SIPRegisterInd StationState:wait_register App ID:Cisco CallManager Cluster ID:StandAloneCluster Node ID:ucmoeb-sub01
 48861927.014 |11:38:18.574 |AlarmErr |AlarmClass: CallManager, AlarmName: EndPointTransientConnection, AlarmSeverity: Error, AlarmMessage: , AlarmDescription: An endpoint attempted to register but did not complete registration, AlarmParameters:  ConnectingPort:5060, DeviceName:ATA210DC67D6201, DeviceType:36262, Reason:3, Protocol:SIP, MACAddress:210DC67D6201, LastSignalReceived:SIPRegisterInd, StationState:wait_register, AppID:Cisco CallManager, ClusterID:StandAloneCluster, NodeID:ucmoeb-sub01,
-48861927.015 |11:38:18.574 |AppInfo  |SIPStationD(83948) - Phone supports ExtendedRefer, sending status line: €/
+48861927.015 |11:38:18.574 |AppInfo  |SIPStationD(83948) - Phone supports ExtendedRefer, sending status line: Â€/
 48861927.016 |11:38:18.574 |AppInfo  |SIPStationD(83948) - sendRemoteCCReferReq: norefersub - 0, getLine - 0, myLineNum - 0
 48861927.017 |11:38:18.574 |Created  |                                       |                               |Subscriber(3,100,62,106725)      |SIPStationD(3,100,74,83948)      |                                         |NumOfCurrentInstances: 16
 48861927.018 |11:38:18.575 |AppInfo  |SIPStationD(83948) - DevStat-StopClose: Unable to find device/user in database
@@ -3546,7 +3546,7 @@ Plat Ver: 11.5.3-1521045619
 Remote backup failing need VOSS to delete hung lock file.",SGP-CUCDM-UNIFIED-40: will not create remote backups:hung lock file,AT&T,Voice - Communications Manager Additional Apps and Plugins,CUCDM 10.1.1 and above (Cisco Unified Communications Domain Manager) for HCS,Redirect-3rd Party Support,11.5.3PB3,voss removed lockfile.lock file from CUCDM CLI.,Closed
 0,688246737,1/14/2020 11:28 AM,2/21/2020 11:58 AM,14/01/20,21/02/20,"Buenas tardes
 
-Solicito su colaboración para realizar el proceso de depuración de los discos de CUCDM-HCS, para evitar los problemas que venimos presentando. 
+Solicito su colaboraciÃ³n para realizar el proceso de depuraciÃ³n de los discos de CUCDM-HCS, para evitar los problemas que venimos presentando. 
 
 
 platform@HCS-TRI-CUCDM-UN1:~$ diag disk
@@ -3560,7 +3560,7 @@ none            3.9G     0  3.9G   0% /run/shm
 /dev/sdb1       9.9G  1.6G  7.9G  17% /var/log
 /dev/sdb2        40G   21G   17G  56% /opt/platform
 /dev/sdc1        50G  180M   47G   1% /backups
-/dev/sde1       315G  218G   82G  73% /opt/platform/apps/mongodb/chroot/dbroot",CUCDM-HCS- Depuración de DISCO,CLARO,Voice - Communications Manager Additional Apps and Plugins,CUCDM 10.1.1 and above (Cisco Unified Communications Domain Manager) for HCS,Software Configuration,12.5(X),"Voss assisted in reducing the memory and suggested an upgrade, however the customer is not yet decided to do upgrade.
+/dev/sde1       315G  218G   82G  73% /opt/platform/apps/mongodb/chroot/dbroot",CUCDM-HCS- DepuraciÃ³n de DISCO,CLARO,Voice - Communications Manager Additional Apps and Plugins,CUCDM 10.1.1 and above (Cisco Unified Communications Domain Manager) for HCS,Software Configuration,12.5(X),"Voss assisted in reducing the memory and suggested an upgrade, however the customer is not yet decided to do upgrade.
 
 Closing the case since everything we can do is done.",Closed
 0,688247223,1/14/2020 12:23 PM,2/21/2020 5:31 AM,14/01/20,21/02/20,"One user is able to log into self care, all the others I know of cant. I have cross referenced settings and don't show any configurations that could be causing this. users are able to log into admin. users get a user password error. I rebuilt user in hcs, confirmed they are using correct case/user name/password.",most users unable to log into hcs self care,SPRINT:KSOPHW0206 2B562,Contact Center Software,UCCE/Contact Center Enterprise/ICM - Hosted Collaboration Solution (HCS),Software Configuration,10.1.1,VOSS resolved.,Closed
@@ -3626,17 +3626,17 @@ the below error is returned
 25076974 Request Failed	ManageEntity
     =>  Entered at: 2020/01/15 15:56:01 EST
  	
- 	IPPBX_Driver: Failed to locate user profile of [E3006979Â @education.wa.edu.au]
+ 	IPPBX_Driver: Failed to locate user profile of [E3006979Ã‚ @education.wa.edu.au]
     => Started at: 2020/01/15 15:56:01 EST
  	    => End at: 2020/01/15 15:56:02 EST
  	
 Status of sub transactions
  									
-25076975  LogoutCMUser	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ã?Â @education.wa.edu.au]
+25076975  LogoutCMUser	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ãƒ?Ã‚ @education.wa.edu.au]
  						
-25076976  --- QueryUserDevices	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ã?Â @education.wa.edu.au]
+25076976  --- QueryUserDevices	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ãƒ?Ã‚ @education.wa.edu.au]
  						
-25076977  --- --- Driver_IPPBX	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ã?Â @education.wa.edu.au]
+25076977  --- --- Driver_IPPBX	F  	IPPBX_Driver: Failed to locate user profile of [E3006979Ãƒ?Ã‚ @education.wa.edu.au]
 						
 Please engage a VOSS engineer to assist.",Unable to delete user in CUCDM 8,TELSTRA CORPORATION,Voice - Communications Manager Additional Apps and Plugins,CUCDM (Cisco Unified Communications Domain Manager) for HCS,Software Configuration,xxx,"Resolution Summary
 Issue was resolved by deleting manually the entries regarding the fintnumber - 0013018316011923.
@@ -4485,7 +4485,7 @@ addlDesc
 Number of caller: +64212599816
 Number called: +6448194000
 Number of person transferred to: +6448194032
-Exact date/time (or as close as you can): 14/01/2020 ¿ Transfer attempt at 8.52am
+Exact date/time (or as close as you can): 14/01/2020 Â¿ Transfer attempt at 8.52am
 questAuthDispatch 
 Business Hours
 Power&Equipment:Not_Applicable|
@@ -5917,11 +5917,11 @@ Pending the following on the error:
 Unity Connection logs:
 
 First enable the following micro traces:
-·         SMTP (all levels)
-·         MTA (all levels)
-·         CuImapSvr (all levels)
-·         CsMalUmss (all levels)
-·         CML (all levels)
+Â·         SMTP (all levels)
+Â·         MTA (all levels)
+Â·         CuImapSvr (all levels)
+Â·         CsMalUmss (all levels)
+Â·         CML (all levels)
 Then collect the following logs covering the timeframe of when the error was received:
 
 
@@ -5953,11 +5953,11 @@ Enable the following diagnostics:
 
 _______________________________
 
-·         Enable VMO Outlook Extension Diagnostics
-·         Enable VMO Multimedia Diagnostics
+Â·         Enable VMO Outlook Extension Diagnostics
+Â·         Enable VMO Multimedia Diagnostics
 1.       If the problem is related to secure messages or recording and playback through the phone, enable the following diagnostics:
-·         Enable VMO Telephone Record/Playback Diagnostics
-·         Enable VMO HTTP Diagnostics
+Â·         Enable VMO Telephone Record/Playback Diagnostics
+Â·         Enable VMO HTTP Diagnostics
 1.       Select OK.
 2.       Reproduce the problem.
 3.       Review the resulting log files, which are stored in the C:\Documents and Settings\All Users\Application Data\Cisco Systems\VMO\1.0\Logs folder.
